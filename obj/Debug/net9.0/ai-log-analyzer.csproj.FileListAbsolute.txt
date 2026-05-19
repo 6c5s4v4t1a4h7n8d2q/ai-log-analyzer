@@ -1,0 +1,14 @@
+D:\Git\ai-log-analyzer\bin\Debug\net9.0\ai-log-analyzer.exe
+D:\Git\ai-log-analyzer\bin\Debug\net9.0\ai-log-analyzer.deps.json
+D:\Git\ai-log-analyzer\bin\Debug\net9.0\ai-log-analyzer.runtimeconfig.json
+D:\Git\ai-log-analyzer\bin\Debug\net9.0\ai-log-analyzer.dll
+D:\Git\ai-log-analyzer\bin\Debug\net9.0\ai-log-analyzer.pdb
+D:\Git\ai-log-analyzer\obj\Debug\net9.0\ai-log-analyzer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\ai-log-analyzer\obj\Debug\net9.0\ai-log-analyzer.AssemblyInfoInputs.cache
+D:\Git\ai-log-analyzer\obj\Debug\net9.0\ai-log-analyzer.AssemblyInfo.cs
+D:\Git\ai-log-analyzer\obj\Debug\net9.0\ai-log-analyzer.csproj.CoreCompileInputs.cache
+D:\Git\ai-log-analyzer\obj\Debug\net9.0\ai-log-analyzer.dll
+D:\Git\ai-log-analyzer\obj\Debug\net9.0\refint\ai-log-analyzer.dll
+D:\Git\ai-log-analyzer\obj\Debug\net9.0\ai-log-analyzer.pdb
+D:\Git\ai-log-analyzer\obj\Debug\net9.0\ai-log-analyzer.genruntimeconfig.cache
+D:\Git\ai-log-analyzer\obj\Debug\net9.0\ref\ai-log-analyzer.dll
