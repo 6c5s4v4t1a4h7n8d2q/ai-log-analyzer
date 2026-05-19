@@ -6,6 +6,11 @@
     <RootNamespace>ai_log_analyzer</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <UserSecretsId>53dd600e-e2a5-47f2-a4cc-5d36d81f5147</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenAI" Version="2.10.0" />
+  </ItemGroup>
 
 </Project>

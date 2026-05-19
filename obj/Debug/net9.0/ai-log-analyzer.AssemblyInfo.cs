@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ai-log-analyzer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c90d6b121cf62c44316fee691f07ecca697f0d78")]
 [assembly: System.Reflection.AssemblyProductAttribute("ai-log-analyzer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ai-log-analyzer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
