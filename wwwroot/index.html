@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Log Analyzer</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="workspace" aria-labelledby="page-title">
+      <div class="intro">
+        <p class="eyebrow">OpenAI log triage</p>
+        <h1 id="page-title">AI Log Analyzer</h1>
+        <p>Upload a text log and get a focused breakdown of errors, severity, likely causes, and next steps.</p>
+      </div>
+
+      <form id="upload-form" class="upload-panel">
+        <label class="drop-zone" for="log-file">
+          <span class="drop-title">Choose a log file</span>
+          <span class="drop-meta">Accepted: .txt or .log, up to 2 MB</span>
+          <input id="log-file" name="logFile" type="file" accept=".txt,.log,text/plain">
+        </label>
+
+        <div class="file-row">
+          <span id="file-name">No file selected</span>
+          <button id="analyze-button" type="submit">Analyze log</button>
+        </div>
+      </form>
+
+      <section class="result-panel" aria-live="polite">
+        <div class="result-header">
+          <h2>Analysis</h2>
+          <span id="status-pill" class="status-pill">Idle</span>
+        </div>
+        <div id="result" class="result empty">Upload a log file to start.</div>
+      </section>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
