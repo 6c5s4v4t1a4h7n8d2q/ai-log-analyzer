@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheap Flight Scanner</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="workspace" aria-labelledby="page-title">
+      <nav class="top-nav" aria-label="App pages">
+        <a href="/">Log analyzer</a>
+        <a href="/image.html">Image explainer</a>
+        <a href="/flights.html" aria-current="page">Flight scanner</a>
+      </nav>
+
+      <div class="intro">
+        <p class="eyebrow">Personal travel search</p>
+        <h1 id="page-title">Cheap Flight Scanner</h1>
+        <p>Enter travel dates and cities. The app resolves airports as you type, then scans for cheaper round-trip options.</p>
+      </div>
+
+      <form id="flight-form" class="upload-panel flight-form">
+        <div class="field-grid">
+          <label>
+            <span>From date</span>
+            <input id="from-date" name="fromDate" type="date" required>
+          </label>
+          <label>
+            <span>To date</span>
+            <input id="to-date" name="toDate" type="date" required>
+          </label>
+          <label>
+            <span>Departure</span>
+            <input id="departure" name="departure" type="text" list="departure-options" autocomplete="off" placeholder="Perth, New York, LHR" required>
+            <datalist id="departure-options"></datalist>
+          </label>
+          <label>
+            <span>Destination</span>
+            <input id="destination" name="destination" type="text" list="destination-options" autocomplete="off" placeholder="Tokyo, Paris, JFK" required>
+            <datalist id="destination-options"></datalist>
+          </label>
+        </div>
+
+        <div class="file-row">
+          <span id="flight-hint">Economy, 1 adult, USD pricing</span>
+          <button id="flight-button" type="submit">Scan flights</button>
+        </div>
+      </form>
+
+      <section class="result-panel" aria-live="polite">
+        <div class="result-header">
+          <h2>Cheap Flight Results</h2>
+          <span id="flight-status-pill" class="status-pill">Idle</span>
+        </div>
+        <div id="flight-result" class="result empty">Enter a route and dates to start.</div>
+      </section>
+    </section>
+  </main>
+
+  <script src="/shared.js"></script>
+  <script src="/flights.js"></script>
+</body>
+</html>

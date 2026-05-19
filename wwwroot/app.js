@@ -15,7 +15,7 @@ form.addEventListener("submit", async (event) => {
 
   const file = fileInput.files[0];
   if (!file) {
-    setStatus("Choose a file", "error");
+    setStatus(statusPill, "Choose a file", "error");
     result.textContent = "Select a .txt or .log file before analyzing.";
     result.className = "result";
     return;
@@ -24,7 +24,7 @@ form.addEventListener("submit", async (event) => {
   const formData = new FormData();
   formData.append("logFile", file);
 
-  setStatus("Analyzing", "loading");
+  setStatus(statusPill, "Analyzing", "loading");
   button.disabled = true;
   result.className = "result empty";
   result.textContent = "Sending log content for analysis...";
@@ -40,45 +40,14 @@ form.addEventListener("submit", async (event) => {
       throw new Error(payload.detail || payload.error || "Analysis failed.");
     }
 
-    setStatus("Done", "done");
+    setStatus(statusPill, "Done", "done");
     result.className = "result";
     result.innerHTML = renderMarkdownHeadings(payload.analysis);
   } catch (error) {
-    setStatus("Error", "error");
+    setStatus(statusPill, "Error", "error");
     result.className = "result";
     result.textContent = error.message;
   } finally {
     button.disabled = false;
   }
 });
-
-function setStatus(text, state) {
-  statusPill.textContent = text;
-  statusPill.className = `status-pill ${state}`;
-}
-
-function formatBytes(bytes) {
-  if (bytes < 1024) {
-    return `${bytes} B`;
-  }
-
-  if (bytes < 1024 * 1024) {
-    return `${(bytes / 1024).toFixed(1)} KB`;
-  }
-
-  return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
-}
-
-function renderMarkdownHeadings(markdown) {
-  const escaped = escapeHtml(markdown);
-  return escaped.replace(/^## (.+)$/gm, "<h3>$1</h3>");
-}
-
-function escapeHtml(value) {
-  return value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}

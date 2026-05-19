@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Image Explainer</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="workspace" aria-labelledby="page-title">
+      <nav class="top-nav" aria-label="App pages">
+        <a href="/">Log analyzer</a>
+        <a href="/image.html" aria-current="page">Image explainer</a>
+        <a href="/flights.html">Flight scanner</a>
+      </nav>
+
+      <div class="intro">
+        <p class="eyebrow">OpenAI vision</p>
+        <h1 id="page-title">AI Image Explainer</h1>
+        <p>Upload a picture and get a concise description of the subjects, visible text, notable details, and uncertainties.</p>
+      </div>
+
+      <form id="image-form" class="upload-panel">
+        <label class="drop-zone image-drop-zone" for="image-file">
+          <span class="drop-title">Choose a picture</span>
+          <span class="drop-meta">Accepted: PNG, JPG, WEBP, or GIF, up to 10 MB</span>
+          <input id="image-file" name="imageFile" type="file" accept="image/png,image/jpeg,image/webp,image/gif">
+        </label>
+
+        <div id="preview-panel" class="preview-panel empty">
+          <span>No image selected</span>
+        </div>
+
+        <div class="file-row">
+          <span id="image-file-name">No file selected</span>
+          <button id="describe-button" type="submit">Explain image</button>
+        </div>
+      </form>
+
+      <section class="result-panel" aria-live="polite">
+        <div class="result-header">
+          <h2>Explanation</h2>
+          <span id="image-status-pill" class="status-pill">Idle</span>
+        </div>
+        <div id="image-result" class="result empty">Upload an image to start.</div>
+      </section>
+    </section>
+  </main>
+
+  <script src="/shared.js"></script>
+  <script src="/image.js"></script>
+</body>
+</html>
